@@ -2,10 +2,11 @@ const express = require('express');
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const app = express();
-const log = require("./src/logger.js").log;
 
+const respondWith404 = function(req, res) {
+    res.status(404).send(`404 File not found!\t bad url ${req.url}`);
+};
 
-app.use(log());
 app.use(cookieParser());
 app.use(express.urlencoded({
     extended: false
@@ -17,6 +18,6 @@ app.get("/",(req,res)=>{
 })
 
 app.use(express.static('public'));
-app.use(handlers.respondWith404);
+app.use(respondWith404);
 
 module.exports=app;
