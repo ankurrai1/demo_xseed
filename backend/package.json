@@ -1,0 +1,36 @@
+{
+  "name": "demo_xseed",
+  "version": "1.0.0",
+  "description": "this is an app for troops game",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "coverage": "nyc -r html mocha --recursive",
+    "start": "node server.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*",
+      "public/*"
+    ],
+    "watch": [
+      "src/*",
+      "app.js",
+      "server.js"
+    ],
+    "delay": "2500"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.4",
+    "nyc": "^11.7.3",
+    "supertest": "^3.0.0"
+  }
+}
