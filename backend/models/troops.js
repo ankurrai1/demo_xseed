@@ -3,6 +3,7 @@ const mongoose =require("mongoose");
 const TroopsSchema = new mongoose.Schema({
     Kind: {
         type: String,
+        unique: true,
         required: [true, "field required"],
     },
     Description:{
