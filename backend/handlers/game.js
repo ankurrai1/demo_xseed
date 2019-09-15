@@ -2,9 +2,9 @@ const Game = require("../models/game")
 
 exports.create = (req, res) => {
     data = req.body;
-    const user = new User(validData);
+    const game = new Game(validData);
     try {
-        const save= user.save();
+        const save= game.save();
         return res.status(200).json({ token, save, message: "game created" });
     } catch (errors) {
         return res.status(500).json({ errors: errors.mapped() });
@@ -13,7 +13,7 @@ exports.create = (req, res) => {
 
 exports.all = (req, res)=> {
     try {
-        const games = await Game.find({});
+        const games = Game.find({});
         return res.status(200).json({ games });
     } catch (errors) {
         return res.status(500).json({ errors });
