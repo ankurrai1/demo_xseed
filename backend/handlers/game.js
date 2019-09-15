@@ -36,7 +36,7 @@ exports.update = (req, res)=> {
     validData = req.body;
     try {
         Game.findByIdAndUpdate(validData.id, validData.data);
-        const game = await game.findById(validData.id);
+        const game = game.findById(validData.id);
         return res.status(200).json({ game, message: "game has been updated" });
     } catch (errors) {
         return res.status(500).json({ errors });
@@ -46,7 +46,7 @@ exports.update = (req, res)=> {
 exports.remove =  (req, res)=> {
     validData = req.body;
     try {
-        const game = await Game.findByIdAndRemove(validData.id);
+        const game = Game.findByIdAndRemove(validData.id);
         return res.status(200).json({ game, message: "game has been removed" });
     } catch (errors) {
         return res.status(500).json({ errors });
