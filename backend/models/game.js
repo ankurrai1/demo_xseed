@@ -2,8 +2,12 @@ const mongoose =require("mongoose");
 
 const GameShema = new mongoose.Schema({
     gamestatus:{
-        type:JSON,
-    }},
+        type:JSON
+    },
+    gameResult:{
+        type: JSON
+    }
+},
 { timestamps: true });
 
 let Game
