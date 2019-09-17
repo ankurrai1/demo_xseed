@@ -16,10 +16,16 @@ Add:
 
 
 <--------------------------- Page-2 -----------------------------> 
-Pre-requisite:
+
+Pre-requisite::
+A::
 1.create a random number in js multiple of 3 say x (<600= optional), that will be the no. of member of droid army for this very battle
 2.select any x random members from droid
-3.now you can have max(2*x/3) memebers in trropers army => make a validator for that 
+3.provide that list elements to the classid: 'droid members' to create h5 tags dynamically
+
+
+B::
+1.now you can have max(2*x/3) memebers in trropers army => make a validator for that 
 user will select members with thier number(quantity) and add them using + button , that list (memeber name/kind along with number will be added to list)
 check whether no. doesn't exceeds (2*x/3) after/before each add,
 submit button will start the battle/redirect to the page3
