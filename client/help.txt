@@ -1,0 +1,99 @@
+Do Page 3,4,2 1 in oreder stated for ease
+
+
+<--------------------------- Page-1 -----------------------------> 
+:  :  : Wants :  :  :
+
+complete detailed description of members of both the armies
+
+:  :  : Provides :  :  :  :
+
+new/final list of member their complete details (old+new members)
+function with js::=>
+Upadte: 
+Delete :
+Add:
+
+
+<--------------------------- Page-2 -----------------------------> 
+Pre-requisite:
+1.create a random number in js multiple of 3 say x (<600= optional), that will be the no. of member of droid army for this very battle
+2.select any x random members from droid
+3.now you can have max(2*x/3) memebers in trropers army => make a validator for that 
+user will select members with thier number(quantity) and add them using + button , that list (memeber name/kind along with number will be added to list)
+check whether no. doesn't exceeds (2*x/3) after/before each add,
+submit button will start the battle/redirect to the page3
+
+for battle::
+
+use the list(member kind) to find their repective strength,agility,intelligence from db
+sum them categoically(strength,agility,intelligence) add them and store them as a poweractor,
+do this for both armies,
+
+=>the person whose powerfactor is greater wins(in case of tie droid wins)
+
+
+
+
+:  :  : Wants :  :  :
+
+List of all kinds(members) with strenth agility and intelligence, as list
+
+:  :  : Provides :  :  :  :
+
+add-data(class in document) => to add list (kind,number) to the team/army 
+
+do:
+left = total-number and send data to span's id : left-number 
+
+battle button(id: submit-team) on click submit's the created list data and redirects to page 3
+
+provides x, 2*x/3, poweractor, cumulative strength,agility,intelligence for page3 and page4(db)
+
+
+db: Database
+
+
+<--------------------------- Page-3 -----------------------------> 
+:  :  : Wants :  :  :
+
+change span's text havind id : battle-winner,
+to the winner team name
+id          type    operation
+no-trooper          change the id's text with no of members participated in battle from trropers army(2*x/3)
+
+no-droids            change the id's text with no of members participated in battle from droid army(2*x/3)
+
+strength             change the id's text with cumulative winners army strength(sum of all strenth)
+
+agility                 same 
+
+intelligence            same
+
+
+
+
+<--------------------------- Page-4 -----------------------------> 
+
+:  :  : Wants :  :  :
+
+page2's data/ databse data 
+
+as 
+<tr>
+        <td>Battle No.</td>
+        <td>Time</td>
+        <td>Winner</td>
+        <td>Power Factor</td>
+        <td>No. of Droids</td>
+        <td>No. of Troopers</td>
+    </tr>
+
+format
+
+table body id: table-body
+table id : datatable
+
+refer script int html file
+
+WARNING: don't remove any class from table
