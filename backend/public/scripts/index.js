@@ -16,7 +16,7 @@ const createRequest = function(callback, url, reqBody=null, method = "GET") {
 };
 
 const createRequestFor=function(objectName,callback){
-    let baseUrl ="https://localhost:4040/"
+    let baseUrl ="https://localhost:4040"
     let urlRequestedFor = baseUrl + objectName;
     createRequest(callback,urlRequestedFor);
 };

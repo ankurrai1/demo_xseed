@@ -18,7 +18,7 @@
 
 
 </head>
-<body>
+<body  onload="updateTroops()">
 <!--carousel section-->
 <div class="container-fluid">	
 	<div class="row">
@@ -72,37 +72,15 @@
                                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
                                 <table class="table table-responsive-md overflow-auto table-sm table-bordered table table-bordered table-striped mb-0" id="makeEditable">
                                     
-                                    <tbody>
-                                        <tr>
-                                            <td>Default</td>
-                                            <td>Defaultson</td>
-                                            <td>def@somemail.com</td>
-                                        </tr>
-                                        <tr class="success">
-                                            <td>Success</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr class="danger">
-                                            <td>Danger</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>Info</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>Warning</td>
-                                            <td>Refs</td>
-                                            <td>bo@example.com</td>
-                                        </tr>
-                                        <tr class="active">
-                                            <td>Active</td>
-                                            <td>Activeson</td>
-                                            <td>act@example.com</td>
-                                        </tr>
+                                    <tbody id="clone_tropes">
+                                        <thead>
+                                            <th>Kind</th>
+                                            <th>Strength</th>
+                                            <th>Terrain</th>
+                                            <th>Agility</th>
+                                            <th>Intelligence</th>
+                                        </thead>
+
                                     </tbody>
                                 </table>
                                 </div>
@@ -120,37 +98,14 @@
                                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
                                 <table class="table table-responsive-md overflow-auto table-sm table-bordered table table-bordered table-striped mb-0" id="makeEditable1">
                                     
-                                    <tbody>
-                                        <tr>
-                                            <td>Default</td>
-                                            <td>Defaultson</td>
-                                            <td>def@somemail.com</td>
-                                        </tr>
-                                        <tr class="success">
-                                            <td>Success</td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr class="danger">
-                                            <td>Danger</td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>Info</td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>Warning</td>
-                                            <td>Refs</td>
-                                            <td>bo@example.com</td>
-                                        </tr>
-                                        <tr class="active">
-                                            <td>Active</td>
-                                            <td>Activeson</td>
-                                            <td>act@example.com</td>
-                                        </tr>
+                                    <tbody id="droid_tropes">
+                                            <thead>
+                                                    <th>Kind</th>
+                                                    <th>Strength</th>
+                                                    <th>Terrain</th>
+                                                    <th>Agility</th>
+                                                    <th>Intelligence</th>
+                                                </thead>
                                     </tbody>
                                 </table>
                                 </div>

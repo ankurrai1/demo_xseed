@@ -1,6 +1,8 @@
 const Troops = require("../models/troops")
+var stringify = require('json-stringify-safe');
 
-exports.create = (req, res) => {
+
+exports.create =  (req, res) => {
     data = req.body;
     const troops = new Troops(validData);
     try {
@@ -11,10 +13,10 @@ exports.create = (req, res) => {
     }
 };
 
-exports.all = (req, res)=> {
+exports.all = async(req, res)=> {
     try {
-        const troops = Troops.find({});
-        return res.status(200).json({ troops });
+        const troops = await Troops.find({});
+        return res.status(200).json(troops);
     } catch (errors) {
         return res.status(500).json({ errors });
     }

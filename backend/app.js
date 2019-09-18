@@ -5,6 +5,7 @@ const bluebird = require("bluebird"); // used for creating promise
 const express = require("express");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
+const route = require('./routes')
 
 const session = require('express-session');
 const MongoStore = require("connect-mongo")(session)
@@ -36,12 +37,7 @@ app.use(session({
 }));
 
 app.use(logger('dev'));
-
-// const user = require("./src/routes/user");
-// const auth = require("./src/routes/auth");
-
-// app.use("/user", user);
-// app.use("/login", auth);
+app.get('/all',route.getAlltroops)
 
 app.use(express.static('public'));
 
