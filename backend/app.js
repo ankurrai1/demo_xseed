@@ -36,12 +36,6 @@ app.use(session({
 }));
 
 app.use(logger('dev'));
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Access-Control-Expose-Headers", "Authorization");
-    next();
-});
 
 // const user = require("./src/routes/user");
 // const auth = require("./src/routes/auth");
@@ -49,9 +43,7 @@ app.use(function (req, res, next) {
 // app.use("/user", user);
 // app.use("/login", auth);
 
-app.get('/', function(req, res){ 
-    res.send('<html>all is well...</html>');
-});
+app.use(express.static('public'));
 
 
 
