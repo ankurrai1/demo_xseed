@@ -29,35 +29,6 @@ function initGallery(){
     }
     dots[slideIndex].classList.add("active");
 }
-const updateTroops = function(){
-    createRequest(generateAndFill,"/all");
-}
-
-// const getTrTd = function(list,tableBody){
-//     for (var i=0; i<list.length; i++){
-//         var tr = document.createElement('TR');
-//         tr.classList.add("success");
-//         tr.innerHTML = `<td>${list[i].Kind}</td><td>${list[i].Strength}</td><td>${list[i].Terrain}</td><td>${list[i].Agility}</td><td>${list[i].Intelligence}</td>`
-//         tableBody.appendChild(tr);
-
-//     }
-// }
-
-const generateAndFill = function(){
-    // let troops = JSON.parse(this.responseText);
-    // let clone = []
-    // let droid = []
-    // for (let index = 0; index < troops.length; index++) {
-    //     if (troops[index].Type == "clone trooper") 
-    //         clone.push(troops[index])
-    //     else
-    //         droid.push(troops[index])
-    // }
-    // let tableBodyC = document.getElementById("clone_tropes");
-    // getTrTd(clone,tableBodyC)
-    // let tableBodyD = document.getElementById("droid_tropes");
-    // getTrTd(droid,tableBodyD)
-}
 
 initGallery();
 function plusSlides(n) {

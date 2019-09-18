@@ -1,5 +1,5 @@
-var csv1 = [];
-var csv2 = [];
+// window.csv1 = [];
+// window.csv2 = [];
 
 const showError = function(){
     if(this.status != 200){
@@ -27,28 +27,20 @@ const createRequestFor=function(objectName,callback){
 
 // ===================================================================================================== page 2
 
+// const updateDroids = function(){
+//     // createRequest(generateAndFill,"/all");
+// }
+
+
 const getTrTd = function(list,tableBody){
     for (var i=0; i<list.length; i++){
         var tr = document.createElement('TR');
-        tr.classList.add("success");
-        tr.innerHTML = `<td>${list[i].Kind}</td>`
+        tr.innerHTML = `<td><center><h3>${list[i][0]}</center></h3></td>`
         tableBody.appendChild(tr);
-
     }
 }
-
 const generateAndFill = function(){
-    let troops = JSON.parse(this.responseText);
-    let clone = []
-    let droid = []
-    for (let index = 0; index < troops.length; index++) {
-        if (troops[index].Type == "clone trooper") 
-            clone.push(troops[index])
-        else
-            droid.push(troops[index])
-    }
-    let tableBodyC = document.getElementById("clone_tropes");
-    getTrTd(clone,tableBodyC)
-    let tableBodyD = document.getElementById("droid_tropes");
-    getTrTd(droid,tableBodyD)
+    let tableBodyC = document.getElementById("all_droid");
+    let csv2 = JSON.parse(window.localStorage.getItem('csv2'))
+    getTrTd(csv2 , tableBodyC)
 }

@@ -20,7 +20,7 @@
 
 </head>
 
-<body onload="updateTroops()">
+<body >
     <!--carousel section-->
     <div class="container-fluid">
         <div class="row">
@@ -215,8 +215,10 @@
                 for (i = 0; i < ar_lines.length; i++) {
                     each_data_value[i] = ar_lines[i].split(",");
                 }
-                csv2 = each_data_value;
-
+                window.localStorage.setItem('csv1', JSON.stringify(each_data_value));
+                // writeTofile("../bin/csv1.json",each_data_value);
+                // global.csv2 = each_data_value;
+                // createRequest(showError,"https://localhost:4040/saveClone",{"data":csv2},"POST");
                 // for (i = 0; i < each_data_value.length; i++) {
                 //     if (each_data_value[i] > 1) {
                 //         console.log(each_data_value[i][2]);
@@ -260,7 +262,8 @@
                 for (i = 0; i < ar_lines.length; i++) {
                     each_data_value[i] = ar_lines[i].split(",");
                 }
-                csv1 = each_data_value;
+                window.localStorage.setItem('csv2', JSON.stringify(each_data_value));
+                // writeTofile("../bin/csv2.json",each_data_value);
                 // for (i = 0; i < each_data_value.length; i++) {
                 //     if (each_data_value[i] > 1) {
                 //         csv1 += (each_data_value[i][2])+"\n";

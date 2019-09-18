@@ -6,6 +6,10 @@ const getAlltroops = function(req,res){
     troops.all(req,res);
 }
 
+const saveClone = function(req,res){
+    game.all(req,res);
+}
+
 const add = function(req,res){
 }
 

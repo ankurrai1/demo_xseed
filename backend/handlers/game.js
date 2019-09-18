@@ -20,6 +20,16 @@ exports.all = (req, res)=> {
     }
 };
 
+exports.upsert = async (req,res)=>{
+    validData = req.body;
+    const game = Game.findById(validData.id);
+        if (!game) {
+            game = new game({"gamestatus":validData.data})
+            game.save()
+        }
+        else update(req,res);
+        return res.status(200).json("created sussessful");
+}
 
 exports.byId = (req, res) => {
     validData = req.body;
@@ -32,11 +42,11 @@ exports.byId = (req, res) => {
     }
 };
 
-exports.update = (req, res)=> {
+exports.update = async(req, res)=> {
     validData = req.body;
     try {
         Game.findByIdAndUpdate(validData.id, validData.data);
-        const game = game.findById(validData.id);
+        const game = await game.findById(validData.id);
         return res.status(200).json({ game, message: "game has been updated" });
     } catch (errors) {
         return res.status(500).json({ errors });

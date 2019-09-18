@@ -73,7 +73,7 @@ footer a {
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="generateAndFill()">
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -108,7 +108,12 @@ footer a {
             <strong class="display-4">Droid Army Members </strong>
         </div>
         <div class="card-body">
-        <h5 class="card-title droid members">Members Name Here</h5>
+        <h5 class="card-title droid members" >Members</h5>
+        <table>
+            <tbody id = "all_droid">
+
+            </tbody>
+        </table>
         </div>
         <div class="card-footer text-muted">
         Get Ready for the Battle
