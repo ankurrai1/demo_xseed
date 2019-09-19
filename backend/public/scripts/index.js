@@ -103,9 +103,10 @@ addmem = function (i) {
 const btsummary=function(res){
     let summary = []
     try {
-      summary = JSON.parse(window.localStorage.getItem('summary'));
+        summary = JSON.parse(window.localStorage.getItem('summary'));
+        if(summary == null || summary == undefined) summary = []
     } catch (error) {
-     console.log(error.message);
+        console.log(error.message);
     }
     finally{
         summary.push(res);
