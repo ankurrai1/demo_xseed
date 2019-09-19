@@ -91,3 +91,4 @@ function playPauseSlides() {
         playPauseBtn.style.backgroundPositionY="-33px"
     }
 }
+
