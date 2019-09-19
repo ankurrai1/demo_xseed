@@ -73,7 +73,7 @@ footer a {
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-<body onload="generateAndFill()">
+<body onload="gennum()">
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -103,17 +103,19 @@ footer a {
     </div>
 </section>
 
-<div class="card text-center">
+<div class="card text-center ">
         <div class="card-header">
             <strong class="display-4">Droid Army Members </strong>
         </div>
         <div class="card-body">
-        <h5 class="card-title droid members" >Members</h5>
+        <!-- <h5 class="card-title droid members" >Members</h5> -->
+        <center>
         <table>
             <tbody id = "all_droid">
 
             </tbody>
         </table>
+    </center>
         </div>
         <div class="card-footer text-muted">
         Get Ready for the Battle
@@ -246,7 +248,7 @@ footer a {
                             <button class="btn btn-block btn-light " onclick="window.location.href = './index.html'"><strong>Left <span id="left-numer"></span></strong></button>
                         </div>
                         <div class="col-sm-12 col-md-6 text-center">
-                            <button type="submit" id="submit-team" class="btn btn-lg btn-block btn-success text-uppercase" onclick="window.location.href = './page3.html'"><span><i class="fa fa-play"></i>     Battle</span></button>
+                            <button type="submit" id="submit-team" class="btn btn-lg btn-block btn-success text-uppercase" onclick="startBattel()"><span><i class="fa fa-play"></i>     Battle</span></button>
                         </div>
                     </div>
                 </div>
