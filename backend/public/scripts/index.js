@@ -51,9 +51,9 @@ const generateAndFill = function (list) {
 st=0 , ag=0 , intell=0 , pf=0 ;
 dst=0 , dag=0, dintell=0 , dpf=0 ;
 fst=0 , fag=0 , fintell=0 , fpf=0 ;
-winner=""
 temp=0
 addmem = function (i) {
+    winner=""
     a = document.getElementById("" + i).value
     let csv1 = JSON.parse(window.localStorage.getItem('csv1'))
     // console.log(csv1[i])
@@ -66,7 +66,7 @@ addmem = function (i) {
     var z = document.getElementsByClassName("add-data")
     // console.log(z)
     temp = l
-    console.log("before if block", a, troopCount)
+    // console.log("before if block", a, troopCount)
     if (troopCount >= a) {
         obj = {}
         obj["" + i] = a;
@@ -77,15 +77,18 @@ addmem = function (i) {
                 z[i].classList.add("disabled")
             }
             let csv2 = JSON.parse(window.localStorage.getItem('csv2'))
-            for (let j = 0; j < csv2.length; j++) {
-                dst += Number(csv1[i][1]) * a
-                dag += Number(csv1[i][3]) * a
-                dintell += Number(csv1[i][4]) * a
-                dpf = dst + dag + dintell
-                console.log(dst, dag, dintell, dpf)
+            // console.log("++++",csv2)
+            for (let j = 0; j < csv2.length-1; j++) {
+                dst += Number(csv2[j][1]) 
+                dag += Number(csv2[j][3]) 
+                dintell += Number(csv2[j][4])
+                console.log("Droid ",j, csv2[j])
             }
-            
+            dpf = dst + dag + dintell
+            console.log("Droid pf",dpf)
+            console.log("Troopres pf",pf)
             if (dpf>pf){
+                // console.log("Under if")
                 fst = dst, fag = dag, fintell = dintell, fpf = dpf,winner="Droid Army"
             }else{
                 fst = st, fag = ag, fintell = intell, fpf = pf,winner="Troopers"
