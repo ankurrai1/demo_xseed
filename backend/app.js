@@ -3,13 +3,11 @@ const dotenv = require("dotenv"); // to config envirnment
 
 
 const express = require("express");
-// const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const route = require('./routes')
 const cors = require("cors");
 
 const session = require('express-session');
-// const MongoStore = require("connect-mongo")(session)
 const app = express();
 dotenv.config({path: ".env"});
 
@@ -27,16 +25,6 @@ app.set("port", port);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
-
-// app.use(session({
-//     resave: true,
-//     saveUninitialized: true,
-//     secret: process.env.SESSION_SECRET,
-//     store: new MongoStore({
-//         url: mongoUrl,
-//         autoReconnect: true
-//     })
-// }));
 
 app.use(logger('dev'));
 app.get('/all',route.getAlltroops)
