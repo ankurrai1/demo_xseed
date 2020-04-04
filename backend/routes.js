@@ -1,7 +1,6 @@
 const troops = require('./handlers/troopes')
 const game = require('./handlers/game')
 
-
 const getAlltroops = function(req,res){
     troops.all(req,res);
 }
@@ -57,7 +56,6 @@ const respondWithQuaryData = function(req,res){
 const respondWith404 = function(req, res) {
     res.status(404).send(`404 File not found!\t bad url ${req.url}`);
 };
-
 
 module.exports={
     respondWith404,
