@@ -1,7 +1,7 @@
 const logger = require("morgan"); // to log user requested url on server
 const dotenv = require("dotenv"); // to config envirnment
 
-// const bluebird = require("bluebird"); // used for creating promise
+
 const express = require("express");
 // const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
