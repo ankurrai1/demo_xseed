@@ -12,7 +12,6 @@ const app = express();
 dotenv.config({path: ".env"});
 
 let port = process.env.PORT ;
-// let mongoUrl = process.env.MONGO_URI;
 
 app.set("port", port);
 
