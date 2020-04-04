@@ -1,7 +1,6 @@
 const logger = require("morgan"); // to log user requested url on server
 const dotenv = require("dotenv"); // to config envirnment
 
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const route = require('./routes')
@@ -24,7 +23,5 @@ app.get('/all',route.getAlltroops)
 app.post('/saveClone',route.getAlltroops);
 
 app.use(express.static('public'));
-
-
 
 module.exports = app;
