@@ -16,12 +16,6 @@ let port = process.env.PORT ;
 
 app.set("port", port);
 
-// (mongoose).Promise = bluebird;
-// mongoose.connect(mongoUrl,{ useNewUrlParser: true })
-//         .then(() => console.log("Connected to Mongo DB"))
-// .catch(err =>console.log("MongoDB connection error. Please make sure MongoDB is running. " + err));
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
