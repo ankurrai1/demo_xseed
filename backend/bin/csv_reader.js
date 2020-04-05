@@ -1,6 +1,7 @@
 const csvFilePath = './bin/army.csv'
 const troops = require("../models/troops")
 const csv = require('csvtojson')
+
 const upload = function () {
     csv()
         .fromFile(csvFilePath)
@@ -17,6 +18,7 @@ const upload = function () {
             console.log("uploaded sucessfully");
         })
 }
+
 module.exports={
     upload
 }
