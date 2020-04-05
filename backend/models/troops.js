@@ -26,10 +26,5 @@ const TroopsSchema = new mongoose.Schema({
 },
 { timestamps: true });
 
-let Troops
-try {
-    Troops = mongoose.model('Troops')
-} catch (error) {
-    Troops = mongoose.model('Troops', TroopsSchema)
-}
+let Troops = mongoose.model('Troops', TroopsSchema)
 module.exports = Troops;
