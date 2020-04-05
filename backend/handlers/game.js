@@ -29,7 +29,7 @@ exports.upsert = async (req,res)=>{
         }
         else update(req,res);
         return res.status(200).json("created sussessful");
-}
+};
 
 exports.byId = (req, res) => {
     validData = req.body;
