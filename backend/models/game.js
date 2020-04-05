@@ -1,5 +1,4 @@
 const mongoose =require("mongoose");
-
 const GameShema = new mongoose.Schema({
     gamestatus:{
         type:JSON
