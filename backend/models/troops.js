@@ -1,5 +1,4 @@
 const mongoose =require("mongoose");
-
 const TroopsSchema = new mongoose.Schema({
     Kind: {
         type: String,
