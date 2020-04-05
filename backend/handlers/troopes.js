@@ -1,7 +1,6 @@
 const Troops = require("../models/troops")
 var stringify = require('json-stringify-safe');
 
-
 exports.create =  (req, res) => {
     data = req.body;
     const troops = new Troops(validData);
