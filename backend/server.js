@@ -1,5 +1,4 @@
 const app=require("./app.js");
-// const upload = require('./bin/csv_reader').upload;
 const PORT = app.get("port");
 const environment = app.get("env");
 
